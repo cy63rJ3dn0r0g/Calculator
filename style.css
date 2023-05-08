@@ -1,0 +1,134 @@
+HTML,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: blueviolet;
+}
+p {
+  font-size: 3rem;
+  font-weight: 1000;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  top: 2.5%;
+}
+.wrapper {
+  position: absolute;
+  min-width: 400px;
+  max-width: 800px;
+  min-height: 69vh;
+  max-width: 69vh;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.calculator {
+  min-width: 400px;
+  max-width: 600px;
+  width: 550px;
+  min-height: 750px;
+  height: 69vh;
+  border: 2px solid rgb(0, 0, 0);
+  background: rgb(193, 193, 194);
+  display: block;
+  border-radius: 20px;
+}
+.screen {
+  width: 90%;
+  height: 17%;
+  background: white;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3%;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  font-size: clamp(1rem, 10vw, 5rem);
+}
+.functions {
+  display: flex;
+  justify-content: center;
+  top: 8%;
+  position: relative;
+  height: 72.5%;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: minmax(120px,auto) repeat(5, auto);
+  gap: 1px 1px;
+  grid-template-areas:
+    "clearScreen clearScreen delete divide "
+    ". . . multiply"
+    ". . . substract"
+    ". . . add"
+    "decimal . equal equal";
+  width: 95%;
+}
+button {
+  border-radius: 5px;
+  border: 1px solid black;
+  display: block;
+  max-width: 100%;
+  background: beige;
+  font-size: clamp(1rem, 10vw, 5rem);
+}
+.button {
+  background: white;
+}
+.clearScreen {
+  grid-area: clearScreen;
+  background: rgb(253, 184, 144);
+}
+.divide {
+  grid-area: divide;
+  font-size: 5em;
+}
+.multiply {
+  grid-area: multiply;
+}
+.substract {
+  grid-area: substract;
+}
+.add {
+  grid-area: add;
+}
+.equal {
+  grid-area: equal;
+}
+.delete {
+  grid-area: delete;
+  background: rgb(253, 184, 144);
+}
+.decimal {
+  grid-area: decimal;
+}
+#currentOperant {
+    height: 45%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 3rem;
+}
+#prevOperant {
+    height: 45%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 3rem;
+}
+button:hover {
+  background: rgb(231, 231, 231);
+}
+.clearScreen:hover {
+  background: rgb(226, 159, 119);
+}
